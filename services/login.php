@@ -1,5 +1,5 @@
 <?php
-$ipdb = '127.0.0.1';
+$ipdb = 'localhost';
 $userdb = 'root';
 $passwd = 'tesisHealthyFood';
 $dbname = 'healthyFood';
