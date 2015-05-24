@@ -1,5 +1,9 @@
 <?php
 require_once("conf_global.inc");
+global $ipdb;
+global $userdb;
+global $passwd;
+global $dbname;
 header('Content-Type: text/html; charset=utf-8');
 $conn = mysql_connect($ipdb,$userdb,$passwd);
 echo $ipdb.'<br>';
