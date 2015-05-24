@@ -1,5 +1,10 @@
 <?php
+require_once("conf_global.inc");
 header('Content-Type: text/html; charset=utf-8');
+$conn = mysql_connect($ipdb,$userdb,$passwd);
+
+mysql_selectdb($dbname, $conn);
+
 mb_internal_encoding('UTF-8');
 if($_FILES['file']['name']){
 $file_path = "images/";
@@ -13,8 +18,6 @@ if(move_uploaded_file($_FILES['file']['tmp_name'], $file_path)) {
 }
 }
 
-$conn = mysql_connect("mysql.hostinger.es","u147283082_admin" ,"seminario2");
-mysql_selectdb("u147283082_hlife", $conn);
 if($_POST){
 	$user=$_POST['user'];
 	$name=$_POST['name'];

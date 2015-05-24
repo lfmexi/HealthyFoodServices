@@ -1,7 +1,9 @@
 <?php
+require_once("conf_global.inc");
 header('Content-Type: text/html; charset=utf-8');
-$conn = mysql_connect("mysql.hostinger.es","u147283082_admin" ,"seminario2");
-mysql_selectdb("u147283082_hlife", $conn);
+$conn = mysql_connect($ipdb,$userdb,$passwd);
+
+mysql_selectdb($dbname, $conn);
 mysql_set_charset("utf8");
 if($_POST){
 	$patron=$_POST['patron'];

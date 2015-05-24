@@ -1,4 +1,11 @@
 <?php
+require_once("conf_global.inc");
+header('Content-Type: text/html; charset=utf-8');
+$conn = mysql_connect($ipdb,$userdb,$passwd);
+
+mysql_selectdb($dbname, $conn);
+
+
 header('Content-Type: text/html; charset=utf-8');
 function randStrGen($len){
     $result = "";
@@ -11,8 +18,6 @@ function randStrGen($len){
     return $result;
 }
 
-$conn = mysql_connect("mysql.hostinger.es","u147283082_admin" ,"seminario2");
-mysql_selectdb("u147283082_hlife", $conn);
 if($_POST){
 	$email=$_POST['email'];
         $randstr = randStrGen(8);

@@ -1,6 +1,11 @@
 ﻿<?php
 include('SimpleImage.php');
+
+require_once("conf_global.inc");
 header('Content-Type: text/html; charset=utf-8');
+$conn = mysql_connect($ipdb,$userdb,$passwd);
+
+mysql_selectdb($dbname, $conn);
 
 function getExtension($str) {
 
@@ -54,9 +59,6 @@ imagedestroy($tmp);
 //    echo "fail";
 //}
 }
-
-$conn = mysql_connect("mysql.hostinger.es","u147283082_admin" ,"seminario2");
-mysql_selectdb("u147283082_hlife", $conn);
 if($_POST){
 	$user=$_POST['user'];
 	$name=$_POST['name'];
