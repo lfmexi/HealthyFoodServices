@@ -3,7 +3,7 @@ include("conf_global.inc");
 header('Content-Type: text/html; charset=utf-8');
 $conn = mysql_connect($ipdb,$userdb,$passwd);
 mysql_selectdb($dbname, $conn);
-echo $ipdb.'Hola';
+print('hola');
 if($_POST){
 	$user=$_POST['user'];
 	$pass=md5($_POST['pass']);
