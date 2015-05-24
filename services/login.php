@@ -1,5 +1,9 @@
 <?php
 include("conf_global.inc");
+$ipdb = '127.0.0.1:3306';
+$userdb = 'root';
+$passwd = 'tesisHealthyFood';
+$dbname = 'healthyFood';
 header('Content-Type: text/html; charset=utf-8');
 $conn = mysql_connect($ipdb,$userdb,$passwd);
 mysql_selectdb($dbname, $conn);
