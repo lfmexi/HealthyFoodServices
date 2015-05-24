@@ -2,7 +2,7 @@
 require_once("conf_global.inc");
 header('Content-Type: text/html; charset=utf-8');
 $conn = mysql_connect($ipdb,$userdb,$passwd);
-
+echo $ipdb.'<br>';
 mysql_selectdb($dbname, $conn);
 
 if($_POST){
