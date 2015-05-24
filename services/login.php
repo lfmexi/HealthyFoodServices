@@ -3,9 +3,9 @@ include("conf_global.inc");
 header('Content-Type: text/html; charset=utf-8');
 $conn = mysql_connect($ipdb,$userdb,$passwd);
 mysql_selectdb($dbname, $conn);
-if($_POST){
-	$user=$_POST['user'];
-	$pass=md5($_POST['pass']);
+if($_REQUEST){
+	$user=$_REQUEST['user'];
+	$pass=md5($_REQUEST['pass']);
 	$query = "SELECT id,nick,nombre,birth, sexo as sex FROM Usuario WHERE nick='".$user."' and pass='".$pass."';";
 	//mysql_query("BEGIN");
 	$result1 = mysql_query($query);
