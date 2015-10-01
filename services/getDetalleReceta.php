@@ -7,7 +7,7 @@ mysql_selectdb($dbname, $conn);
 
 if($_POST){
 	$receta=$_POST['receta'];
-	$query = "SELECT r.Nombre as nombre, r.Instrucciones as instrucciones, r.categoria as categoria, u.nombre as usuario FROM Receta r, Usuario u, WHERE r.Nombre like '".$receta."' AND r.Usuario=Usuario.id;";
+	$query = "SELECT r.Nombre as nombre, r.Instrucciones as instrucciones, r.categoria as categoria, u.nombre  as usuario FROM Receta r, Usuario u, WHERE r.Nombre like '".$receta."' AND r.Usuario=Usuario.id;";
 	//mysql_query("BEGIN");
 	$result1 = mysql_query($query);
 	//mysql_query("COMMIT");
